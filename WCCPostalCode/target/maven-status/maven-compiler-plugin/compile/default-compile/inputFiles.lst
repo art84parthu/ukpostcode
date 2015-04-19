@@ -6,9 +6,10 @@
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/logger/DBLogger.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/core/logic/PCCoordinates.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/common/utils/CommonUtil.java
+/home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/core/logic/error/handling/AuthenticationException.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/auth/AuthenticationService.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/core/logic/ComputePCDistance.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/core/logic/PCDistanceResponse.java
+/home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/auth/AuthenticationFilter.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/core/logic/error/handling/PostCodeNotFoundException.java
 /home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/db/persistance/DBConnection.java
-/home/arthy/git/ukpostcode/WCCPostalCode/src/com/wcc/interview/postal/code/distance/auth/JaxRsFilterAuthentication.java

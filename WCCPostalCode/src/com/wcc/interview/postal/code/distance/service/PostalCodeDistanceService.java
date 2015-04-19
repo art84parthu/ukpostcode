@@ -23,10 +23,10 @@ public class PostalCodeDistanceService {
 		if(response.getDistance() == null){
 			String message = "Unable to find distance.";
 			if(response.getLocation1().getLatitude() == null ){
-				message += "Location 1 postal code not found in the DB";
+				message += " Location 1 postal code not found in the DB. ";
 			}
 			if(response.getLocation2().getLatitude() == null ){
-				message += "Location 2 postal code not found in the DB";
+				message += " Location 2 postal code not found in the DB. ";
 			}
 			throw new PostCodeNotFoundException(message);
 		}
