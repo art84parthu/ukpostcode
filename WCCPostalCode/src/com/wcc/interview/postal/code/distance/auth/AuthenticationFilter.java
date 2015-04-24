@@ -4,11 +4,15 @@ import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.ext.Provider;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.wcc.interview.postal.code.distance.core.logic.error.handling.AuthenticationException;
 
 @Provider
 public class AuthenticationFilter implements ContainerRequestFilter {
-	public static final String AUTHENTICATION_HEADER = "Authorization";
+	private static final String AUTHENTICATION_HEADER = "Authorization";
+	static Logger LOGGER = LogManager.getLogger(AuthenticationFilter.class);
 
 	@Override
 	public void filter(ContainerRequestContext containerRequest)throws AuthenticationException {
@@ -16,7 +20,10 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 		AuthenticationService authenticationService = new AuthenticationService();
 		boolean authenticationStatus = authenticationService.authenticate(authCredentials);
 		if (!authenticationStatus) {
-			throw new AuthenticationException("Invalid user name / password combination. Access denied!");
+			String message = "Invalid user name / password combination. Access denied!";
+			LOGGER.error("Authentication Failed");
+			LOGGER.error("Error message" + message);
+			throw new AuthenticationException(message);
 		}
 	}
 }
