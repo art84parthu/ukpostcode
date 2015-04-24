@@ -3,11 +3,10 @@ package com.wcc.interview.postal.code.distance.db.persistance;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/*
+/**
  * Dummy connection pool.
  * Does no real pooling. Just returns a connection 
  * without checking if it is already in use or not. 
- * 
  */
 public class ConnectionPool {
 	private static int pool_size = 10;
@@ -18,6 +17,10 @@ public class ConnectionPool {
 		pool[0] = DBConnection.getConnection();
 	}
 	
+	/**
+	 * Method getConnection.
+	 * @return Connection
+	 */
 	public static Connection getConnection(){
 		if(pool == null){
 			initPool();

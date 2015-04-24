@@ -8,10 +8,18 @@ import org.apache.logging.log4j.Logger;
 
 import com.wcc.interview.postal.code.distance.service.config.DBConfig;
 
+/**
+ * Connection class
+ * Will fetch DB connection using JDBC driver
+ */
 public class DBConnection {
 
 	static Logger LOGGER = LogManager.getLogger(DBConnection.class);
 	
+	/**
+	 * Method getConnection.
+	 * @return Connection
+	 */
 	public static Connection getConnection(){
 		Connection con = null;
 		try {
@@ -28,6 +36,10 @@ public class DBConnection {
 		return con;
 	}
 
+	/**
+	 * Method main.
+	 * @param args String[]
+	 */
 	public static void main(String[] args){
 		getConnection();
 	}

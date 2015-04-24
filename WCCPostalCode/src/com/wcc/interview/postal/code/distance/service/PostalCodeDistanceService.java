@@ -14,11 +14,25 @@ import com.wcc.interview.postal.code.distance.core.logic.ComputePCDistance;
 import com.wcc.interview.postal.code.distance.core.logic.PCDistanceResponse;
 import com.wcc.interview.postal.code.distance.core.logic.error.handling.PostCodeNotFoundException;
 
+/**
+ * The REST service being exposed outside 
+ * Will internally call the compute distance clases for getting the real distance
+ * 
+ * Sends back http response with JSON response if the postal codes are valid
+ * else, sends appropriate http error codes and message(s).
+ */
 @Path("PostalCodeDistance")
 public class PostalCodeDistanceService {
 
 	static Logger LOGGER = LogManager.getLogger(PostalCodeDistanceService.class);
 	
+	/**
+	 * Method getMsg.
+	 * @param postalCode1 String
+	 * @param postalCode2 String
+	 * @return PCDistanceResponse
+	 * @throws PostCodeNotFoundException
+	 */
 	@GET
 	@Path("/{pc1}/{pc2}")
 	@Produces(MediaType.APPLICATION_JSON)

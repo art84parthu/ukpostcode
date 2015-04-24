@@ -9,9 +9,16 @@ import org.apache.logging.log4j.Logger;
 
 import com.wcc.interview.postal.code.distance.service.config.UserConfig;
 
+/**
+ */
 public class AuthenticationService {
 	static Logger LOGGER = LogManager.getLogger(AuthenticationService.class);
 	
+	/**
+	 * Method authenticate.
+	 * @param authCredentials String
+	 * @return boolean
+	 */
 	public boolean authenticate(String authCredentials) {
 
 		LOGGER.trace("Entering AUTHENTICATION service");

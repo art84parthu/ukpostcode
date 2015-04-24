@@ -14,11 +14,22 @@ import org.apache.logging.log4j.Logger;
 
 import com.wcc.interview.postal.code.distance.service.config.ConfigParams.ConfigParamNames;
 
+/**
+ * Simple servlet for loading custom properties. 
+ */
 public class CustomJerseyConfigLoader extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	static Logger LOGGER = LogManager.getLogger(CustomJerseyConfigLoader.class);
 
+	/**
+	 * Method init.
+	 * overridden to load db properties and user login credentials
+	 * 
+	 * @param config ServletConfig
+	 * @throws ServletException
+	 * @see javax.servlet.Servlet#init(ServletConfig)
+	 */
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		LOGGER.info("Loading custom config DB properties.");
